@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>
+        Моя первая страница
+    </title>
+
+    <div class="topnav">
+        <h1 id="l1">Моё хобби</h1>
+        <a href="home.html" id="r1">Главная</a>
+        <a href="about.html" id="r1">Обо мне</a>
+        <a href="contacts.html" id="r1">Обратная связь</a>
+        
+        <!-- e_5_6 -->
+        <a href="form.html" id="r1">Пример формы</a>     
+    </div>   
+    
+</head>
+<body>
+
+<script src="js/javascript.js"></script>
+
+<div>
+    <p>
+        <h1 id="p1">
+            Python Developer
+        <h1>
+    </p>
+</div>
+
+<div class="content">
+    <p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" 
+        alt="Python" width="300" height="300">
+        <p id="t">Моё хобби и будущая профессия - программист Python.</p>
+    </p>
+</div>
+
+<div>
+    <style>
+        input {
+            width: 200px;
+            margin: 20px 0;
+        }
+    </style>
+    <!-- Обработчик формы указывается в атрибуте action -->
+    <!-- target отвечает за то, где откроется результат отправленной
+         формы. _blank - означает, что в новой вкладке -->
+    <form action="https://yandex.ru/search/" target="_blank">
+        <label for="search">Поиск в Яндекс:</label><br>
+        <input type="search" id="search" name="text" placeholder="Введите поисковый запрос"><br>
+        <button type="submit">Искать</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+
