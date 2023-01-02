@@ -1,0 +1,238 @@
+/* подключение локальных шрифтов */
+/* @font-face{
+    src: url('./fonts/OpenSans-Regular.ttf');
+    font-family: "OpenSans Regular";
+}
+@font-face{
+    src: url('./fonts/OpenSans-Bold.ttf');
+    font-family: "OpenSans Bold";
+}
+@font-face{
+    src: url('./fonts/OpenSans-ExtraBold.ttf');
+    font-family: "OpenSans ExtraBold";
+} */
+
+body {
+    background-color: #dee7ee;
+    width: auto;
+    height: 600px;
+    border-width: thin;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10px;
+
+    /* подключение локальных шрифтов */
+    font-family: 'Open Sans',
+        Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Селектор по тегу */
+h2 {
+    color: #6395a0;
+
+}
+
+/* Идентификаторы по классу (class="food")
+   обозначаются через точку (.)  */
+.food {
+    color: orange;
+}
+
+.household {
+    color: green;
+}
+
+.vet {
+    color: lightblue;
+}
+
+.not-bought {
+    background: red;
+    color: white;
+}
+
+.grown {
+    color: rgb(78, 69, 58);
+    font-weight: bold;
+}
+
+.cell {
+    color: royalblue;
+    font-style: italic;
+}
+
+
+
+/* FLEX */
+.site-menu {
+    /* сделать контейнер flex-контейнером */
+    display: flex;
+
+    /* расположить элементы в ряд слева-направо
+       справа-налево -> flex-direction: row-reverse 
+       сверху-вниз -> flex-direction: column
+       снизу-вверх -> flex-direction: column-reverse */
+    flex-direction: row;
+
+    /* ВЫРАВНИВАНИЕ ПО ГЛАВНОЙ ОСИ
+       начало строки -> flex-start
+       конец строки -> flex-end
+       центр строки -> center
+       от края до края с равным расстоянием между -> space-between*/
+    justify-content: flex-start;
+
+    /* ВЫРАВНИВАНИЕ ПО ДОПОЛНИТЕЛЬНОЙ ОСИ (ПО ВЕРТИКАЛИ)
+       элементы растянутся, если у них не зафиксирована высота -> stretch */
+    align-items: center;
+}
+
+
+
+
+/* Селектор по идентификатору (id="Sofa") 
+   обозначается через sharp (#) */
+#Sofa {
+    color: red;
+}
+
+/* Селектор по атрибуту (href="#Sofa")
+   обозначается ([]) квадратными скобками */
+a[href="#Sofa"] {
+    background: olivedrab;
+}
+
+/* Селектор по срезу названия атрибута (href="#underwear") */
+a[href*="wear"] {
+    background: rgb(142, 140, 35);
+}
+
+/* Элементы с тегом li будут зелеными при наведении курсора */
+li:hover {
+    color: rgb(55, 209, 41);
+}
+
+/* n-ный элемент списка --> :nth-of-type  */
+/* например, каждый 3-й элемент списка.
+   также, можно написать 3n+1 --> каждый 3-й элемент списка
+   со сдвигом на 1 */
+li:nth-child(3n) {
+    background: purple;
+}
+
+
+
+/* псевдоэлементы - позволяют стилизовать определённую
+   часть выбранного элемента.
+   первая буква элементов списка заглавная и зеленая */
+li::first-letter {
+    color: green;
+    text-transform: uppercase;
+}
+
+
+
+/* Задание 9.10.2 */
+.client-text {
+    font-weight: bold;
+    color: blue;
+}
+
+.internet-text {
+    text-transform: uppercase;
+}
+
+.browser-text {
+    font-style: italic;
+    color: orange;
+}
+
+.server-text {
+    color: red;
+}
+
+
+
+h2 {
+    margin: 0;
+}
+
+.gallery {
+    box-shadow: 5px 5px 10px grey;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    /* растянуть flexbox, если контент не влез */
+    /* min-width: fit-content; */
+    max-width: 100%;
+
+    /* прокрутка вбок, если не контент не влез */
+    overflow: auto;
+
+    /* пустить контент вторым рядом */
+    /* flex-wrap: wrap; */
+}
+
+.gallery>img {
+    width: 90px;
+}
+
+.gallery>img:nth-of-type(-n+3) {
+    align-self: flex-start;
+}
+
+.gallery>img:nth-of-type(n+7) {
+    align-self: flex-end;
+}
+
+.photo-3 {
+    /* порядок расположения картинки
+       если -1 то первая, если 0 или больше, то последняя
+       если нужно упорядочить все картинки, тогда нужно, чтобы
+       у них тоже был атрибут order */
+    order: -1;
+    max-width: 80px;
+    min-height: 56px;
+}
+
+
+/* GRID */
+
+.grid-wrapper{
+    display: grid;
+    /* адаптивный грид */
+    /* с фиксированной шириной пикселей */
+    grid-template-columns: repeat(auto-fit, 200px);
+    /* с адаптируемой шириной */
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-rows: auto;
+    grid-gap: 2vw;
+}
+
+.grid-item {
+    min-height: 100px;
+}
+
+.item-1 {
+    background-color: rgb(161, 48, 48);
+}
+
+.item-2 {
+    background-color: rgb(49, 163, 68);
+}
+
+.item-3 {
+    background-color: rgb(34, 32, 180);
+}
+
+.item-4 {
+    background-color: rgb(207, 219, 29);
+}
+
+.item-5 {
+    background-color: rgb(175, 52, 165);
+}
