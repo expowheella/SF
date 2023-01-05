@@ -1,1 +1,1 @@
-document.write('Hello, MAN \n')
+import './js/common'
