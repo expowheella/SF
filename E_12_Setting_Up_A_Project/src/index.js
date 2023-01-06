@@ -1,1 +1,1 @@
-import './js/common'
+import './js/common.js'

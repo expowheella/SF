@@ -1,3 +1,6 @@
+RESOURSES:
+* https://www.youtube.com/playlist?list=PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV
+
 1. В файле <b>webpack.config.js</b> полю <b>mode</b> установим значение <b>development</b>. Так мы обозначим, что эта конфигурация будет использована только в режиме разработки.
 
         module.exports = {

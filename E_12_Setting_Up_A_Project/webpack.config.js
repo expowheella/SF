@@ -1,49 +1,23 @@
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-// // const path = require('path');
-
-// module.exports = {
-//     mode: 'development',
-//     entry: './src/index.js',
-//     devServer: {
-//         static: './dist',
-//     },
-//     plugins: [
-//         new HtmlWebpackPlugin(),
-//         new HtmlWebpackPlugin({
-//             title: 'Development',
-//             filename: 'src/index.html'
-//         }),
-//     ],
-//     output: {
-//         // path: path.resolve(__dirname, './dist'),
-//         path: __dirname + '/dist',
-//         filename: "main.js"
-//     }
-// }
-
-
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
+    mode: 'development', // режим разработчика
     entry: {
-        app: './src/index.js',
+        app: './src/index.js', 
     },
     output: {
-        path: path.resolve(__dirname, '../dist'),
-        filename: '[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js', // название файла будет взято из entry, т.е. будет app.js
         publicPath: './dist'
     },
     devServer: {
-        // static: '/dist',
-        // overlay: true,
+        static: { directory: path.join(__dirname) },
+        client: { overlay: true },
         liveReload: true
     },
-    // plugins: [
-    //     new HtmlWebpackPlugin(),
-    //     new HtmlWebpackPlugin({
-    //         title: 'Development',
-    //         filename: 'src/app.html'
-    //     }),
-    // ]
+    stats: {
+        children: false // скрыть информацию в логах консоли о дочерних элементах.
+    },
+    devtool: 'inline-source-map', // для отслеживание источника ошибок
 }
