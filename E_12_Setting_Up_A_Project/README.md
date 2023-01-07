@@ -11,7 +11,7 @@ RESOURSES:
         src/index.js
 
 <hr>
-    Целиком файл <b>package.json</b> выглядит следующим образом:
+    Целиком файл <b>package.json</b> будет выглядить следующим образом:
 
         {
         "name": "webpack_e_12",
