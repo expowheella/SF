@@ -1,0 +1,16 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Bulat",
+            "email": "bulat_man@mail.ru",
+            "phone": "77055428900"
+        },
+        {
+            "id": 2,
+            "name": "Alsu",
+            "email": "gitraifovna@gmail.com",
+            "phone": "79600123456"
+        }
+    ]
+}

@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
     "pack": "^2.2.0",
     "path": "^0.12.7",
     "webpack": "^5.75.0",
@@ -14,8 +15,12 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "prepare": "husky install"
   },
   "author": "Bulat",
-  "license": "MIT"
+  "license": "MIT",
+  "script": {
+    "prepare": "husky install"
+  }
 }

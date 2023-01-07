@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
     mode: 'development', // режим разработчика
     entry: {
-        app: './src/index.js', 
+        app: './src/index.js', // путь ко входному файлу
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -14,7 +14,8 @@ module.exports = {
     devServer: {
         static: { directory: path.join(__dirname) },
         client: { overlay: true },
-        liveReload: true
+        liveReload: true,
+        hot: true,
     },
     stats: {
         children: false // скрыть информацию в логах консоли о дочерних элементах.

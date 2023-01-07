@@ -1,0 +1,11 @@
+{
+  "name": "e_13_mock_server",
+  "version": "1.0.0",
+  "description": "json mock server",
+  "main": "src/index.js",
+  "scripts": {
+    "contacts": "json-server --watch database.json"
+  },
+  "author": "Bulat Iakhin",
+  "license": "ISC"
+}
