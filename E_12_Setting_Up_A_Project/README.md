@@ -10,7 +10,7 @@ RESOURSES:
 
         src/index.js
 
-    <hr>
+<hr>
     Целиком файл <b>package.json</b> выглядит следующим образом:
 
         {
@@ -35,7 +35,7 @@ RESOURSES:
         "license": "MIT"
         }
 
-    <hr>
+<hr>
     Здесь есть поле <b>scripts</b>, в которое можно прописать скрипты для запуска сервера через консоль командой, например:
 
         $ npm run dev
@@ -123,6 +123,7 @@ RESOURSES:
     const sum = (a, b) => (a+b)
     console.log(sum(3,3))
 
+<hr>
 4. Установим mock-server
 
         $ npm install -g json-server
@@ -156,7 +157,7 @@ RESOURSES:
 
     <i>флаг <b>--watch</b> означает, что сервер будет обновлять данные при изменениях в файле</i>
 
-
+<hr>
 5. Hooks
 
 Используем husky
@@ -191,7 +192,7 @@ RESOURSES:
 
 <hr>
 <hr>
-ОБЩАЯ СТРУКТУРА ПРОЕКТА:
+ОБЩАЯ СТРУКТУРА WEBPACK:
  
     | КОРНЕВАЯ ПАПКА ПРОЕКТА
         -   | dist
